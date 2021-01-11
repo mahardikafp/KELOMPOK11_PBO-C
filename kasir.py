@@ -1,3 +1,4 @@
+#digunakan untuk menyambungkan data dengan sqlite3
 import sqlite3
 import pathlib
 import datetime
@@ -5,7 +6,7 @@ import datetime
 class data:
     def __init__(self):
         #database = str(pathlib.Path().absolute())+"\cobapbo.db"
-        self.connector = sqlite3.connect(r"C:\Users\Dimas Yudhistira\Documents\yDhiz\sofi\kasir.db")
+        self.connector = sqlite3.connect(r"C:\Users\dika\Documents\kasir.db") #file .py dan database harus berada dalam 1 folder (misal documents)
         self.cursor = self.connector.cursor()
 
     def executeQuery(self, query, retval=False):
@@ -143,3 +144,5 @@ while True:
     elif menu == "4":
         kembalian = uang_pembeli - total
         print("Kembalian : ",kembalian)
+    elif menu == "5" :
+        exit()
